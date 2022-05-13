@@ -1,0 +1,62 @@
+choice
+    prompt "Series"
+    default n
+    
+    config SOC_GD32E10X
+        bool "GD32E10x Series"
+    config SOC_GD32E23X
+        bool "GD32E23x Series"
+    config SOC_GD32E50X
+        bool "GD32E50x Series"
+    config SOC_GD32F10X
+        bool "GD32F10x Series"
+    config SOC_GD32F1X0
+        bool "GD32F1x0 Series"
+    config SOC_GD32F20X
+        bool "GD32F20x Series"
+    config SOC_GD32F30X
+        bool "GD32F30x Series"
+    config SOC_GD32F3X0
+        bool "GD32F3x0 Series"
+    config SOC_GD32F4XX
+        bool "GD32F4xx Series"
+    config SOC_GD32L23X
+        bool "GD32L23x Series"
+    config SOC_GD32W51X
+        bool "GD32W51x Series"
+endchoice
+
+if SOC_GD32E10X
+endif
+
+if SOC_GD32E23X
+endif
+
+if SOC_GD32E50X
+endif
+
+if SOC_GD32F10X
+endif
+
+if SOC_GD32F1X0
+endif
+
+if SOC_GD32F20X
+endif
+
+if SOC_GD32F30X
+endif
+
+if SOC_GD32F3X0
+endif
+
+if SOC_GD32F4XX
+    source "common/devices/GigaDevice/GD32F4xx_Series/Kconfig"
+endif
+
+if SOC_GD32L23X
+endif
+
+if SOC_GD32W51X
+endif
+

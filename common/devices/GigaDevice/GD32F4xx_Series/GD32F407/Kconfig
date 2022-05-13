@@ -1,0 +1,30 @@
+choice
+    prompt "Chip"
+    default n
+    
+    config SOC_GD32F407IE
+        bool "GD32F407IE"
+    config SOC_GD32F407IG
+        bool "GD32F407IG"
+    config SOC_GD32F407IK
+        bool "GD32F407IK"
+    config SOC_GD32F407RE
+        bool "GD32F407RE"
+    config SOC_GD32F407RG
+        bool "GD32F407RG"
+    config SOC_GD32F407RK
+        bool "GD32F407RK"
+    config SOC_GD32F407VE
+        bool "GD32F407VE"
+    config SOC_GD32F407VG
+        bool "GD32F407VG"
+    config SOC_GD32F407VK
+        bool "GD32F407VK"
+    config SOC_GD32F407ZE
+        bool "GD32F407ZE"
+    config SOC_GD32F407ZG
+        bool "GD32F407ZG"
+    config SOC_GD32F407ZK
+        bool "GD32F407ZK"
+endchoice
+

@@ -5,6 +5,11 @@ config BSP_DIR
     option env="BSP_ROOT"
     default "."
 
+config SOC_DIR
+    string
+    option env="SOC_ROOT"
+    default "common/devices"
+
 config LIBS_DIR
     string
     option env="LIBS_ROOT"
@@ -20,6 +25,7 @@ config RTT_DIR
     option env="RTT_ROOT"
     default "common/rtt-kernel/4.0.2"
     
+source "$SOC_DIR/Kconfig"
 source "$RTT_DIR/src/Kconfig"
 source "$RTT_DIR/libcpu/Kconfig"
 source "$RTT_DIR/components/Kconfig"

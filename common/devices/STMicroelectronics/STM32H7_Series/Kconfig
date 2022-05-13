@@ -1,0 +1,62 @@
+choice
+    prompt "Sub Series"
+    default n
+    
+  config SOC_STM32H742
+      bool "STM32H742"
+  config SOC_STM32H743
+      bool "STM32H743"
+  config SOC_STM32H745
+      bool "STM32H745"
+  config SOC_STM32H747
+      bool "STM32H747"
+  config SOC_STM32H750
+      bool "STM32H750"
+  config SOC_STM32H753
+      bool "STM32H753"
+  config SOC_STM32H755
+      bool "STM32H755"
+  config SOC_STM32H757
+      bool "STM32H757"
+  config SOC_STM32H7A3
+      bool "STM32H7A3"
+  config SOC_STM32H7B0
+      bool "STM32H7B0"
+  config SOC_STM32H7B3
+      bool "STM32H7B3"
+endchoice
+
+if SOC_STM32H742
+endif
+
+if SOC_STM32H743
+endif
+
+if SOC_STM32H745
+    source "common/devices/STMicroelectronics/STM32H7_Series/STM32H745/Kconfig"
+endif
+
+if SOC_STM32H747
+endif
+
+if SOC_STM32H750
+endif
+
+if SOC_STM32H753
+endif
+
+if SOC_STM32H755
+endif
+
+if SOC_STM32H757
+endif
+
+if SOC_STM32H7A3
+endif
+
+if SOC_STM32H7B0
+endif
+
+if SOC_STM32H7B3
+endif
+

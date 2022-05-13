@@ -1,0 +1,117 @@
+choice
+    prompt "Series"
+    default n
+    
+    config SOC_STBlueNRG1
+        bool "STBlueNRG1 Series"
+    config SOC_STBlueNRG2
+        bool "STBlueNRG2 Series"
+    config SOC_STBlueNRGLP
+        bool "STBlueNRGLP Series"
+    config SOC_STBlueNRG
+        bool "STBlueNRG Series"
+    config SOC_STM32F0
+        bool "STM32F0 Series"
+    config SOC_STM32F1
+        bool "STM32F1 Series"
+    config SOC_STM32F2
+        bool "STM32F2 Series"
+    config SOC_STM32F3
+        bool "STM32F3 Series"
+    config SOC_STM32F4
+        bool "STM32F4 Series"
+    config SOC_STM32F7
+        bool "STM32F7 Series"
+    config SOC_STM32G0
+        bool "STM32G0 Series"
+    config SOC_STM32G4
+        bool "STM32G4 Series"
+    config SOC_STM32H7
+        bool "STM32H7 Series"
+    config SOC_STM32L0
+        bool "STM32L0 Series"
+    config SOC_STM32L1
+        bool "STM32L1 Series"
+    config SOC_STM32L4
+        bool "STM32L4 Series"
+    config SOC_STM32L5
+        bool "STM32L5 Series"
+    config SOC_STM32MP1
+        bool "STM32MP1 Series"
+    config SOC_STM32U5
+        bool "STM32U5 Series"
+    config SOC_STM32W1
+        bool "STM32W1 Series"
+    config SOC_STM32WB
+        bool "STM32WB Series"
+    config SOC_STM32WL
+        bool "STM32WL Series"
+endchoice
+    
+if SOC_STBlueNRG1
+endif
+
+if SOC_STBlueNRG2
+endif
+
+if SOC_STBlueNRGLP
+endif
+
+if SOC_STBlueNRG
+endif
+
+if SOC_STM32F0
+endif
+
+if SOC_STM32F1
+endif
+
+if SOC_STM32F2
+endif
+
+if SOC_STM32F3
+endif
+
+if SOC_STM32F4
+endif
+
+if SOC_STM32F7
+endif
+
+if SOC_STM32G0
+endif
+
+if SOC_STM32G4
+endif
+
+if SOC_STM32H7
+    source "common/devices/STMicroelectronics/STM32H7_Series/Kconfig"
+endif
+
+if SOC_STM32L0
+endif
+
+if SOC_STM32L1
+endif
+
+if SOC_STM32L4
+endif
+
+if SOC_STM32L5
+endif
+
+if SOC_STM32MP1
+endif
+
+if SOC_STM32U5
+endif
+
+if SOC_STM32W1
+endif
+
+if SOC_STM32WB
+endif
+
+if SOC_STM32WL
+endif
+

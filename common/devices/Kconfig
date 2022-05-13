@@ -1,0 +1,222 @@
+menu "SOC Devices"
+
+choice
+    prompt "Manufacturer"
+    default n
+
+    config MFR_ABOVSemiconductor
+        bool "ABOVSemiconductor"
+    config MFR_ActiveSemi
+        bool "ActiveSemi"
+    config MFR_AmbiqMicro
+        bool "AmbiqMicro"
+    config MFR_Amiccom
+        bool "Amiccom"
+    config MFR_AnalogDevices
+        bool "AnalogDevices"
+    config MFR_APEXMIC
+        bool "APEXMIC"
+    config MFR_ARM
+        bool "ARM"
+    config MFR_AutoChips
+        bool "AutoChips"
+    config MFR_BrainChip
+        bool "BrainChip"
+    config MFR_Cmsemicon
+        bool "Cmsemicon"
+    config MFR_Cypress
+        bool "Cypress"
+    config MFR_DialogSemiconductor
+        bool "DialogSemiconductor"
+    config MFR_ELAN
+        bool "ELAN"
+    config MFR_FMD
+        bool "FMD"
+    config MFR_FMSH
+        bool "FMSH"
+    config MFR_Geehy
+        bool "Geehy"
+    config MFR_GigaDevice
+        bool "GigaDevice"
+    config MFR_Goodix
+        bool "Goodix"
+    config MFR_HDSC
+        bool "HDSC"
+    config MFR_Holtex
+        bool "Holtex"
+    config MFR_Infineon
+        bool "Infineon"
+    config MFR_LapisSemiconductor
+        bool "LapisSemiconductor"
+    config MFR_Maxim
+        bool "Maxim"
+    config MFR_MediaTek
+        bool "MediaTek"
+    config MFR_Megawin
+        bool "Megawin"
+    config MFR_Microchip
+        bool "Microchip"
+    config MFR_Microsemi
+        bool "Microsemi"
+    config MFR_MindMotion
+        bool "MindMotion"
+    config MFR_NordicSemiconductor
+        bool "NordicSemiconductor"
+    config MFR_Nuvoton
+        bool "Nuvoton"
+    config MFR_NXP
+        bool "NXP"
+    config MFR_RelChip
+        bool "RelChip"
+    config MFR_Renesas
+        bool "Renesas"
+    config MFR_SILAN
+        bool "SILAN"
+    config MFR_SiliconLabs
+        bool "SiliconLabs"
+    config MFR_Sinowealth
+        bool "Sinowealth"
+    config MFR_SONiX
+        bool "SONiX"
+    config MFR_STMicroelectronics
+        bool "STMicroelectronics"
+    config MFR_TexasInstruments
+        bool "TexasInstruments"
+    config MFR_Toshiba
+        bool "Toshiba"
+    config MFR_XMC
+        bool "XMC"
+    config MFR_Zilog
+        bool "Zilog"
+endchoice
+
+if MFR_ABOVSemiconductor
+endif
+
+if MFR_ActiveSemi
+endif
+
+if MFR_AmbiqMicro
+endif
+
+if MFR_Amiccom
+endif
+
+if MFR_AnalogDevices
+endif
+
+if MFR_APEXMIC
+endif
+
+if MFR_ARM
+endif
+
+if MFR_AutoChips
+endif
+
+if MFR_BrainChip
+endif
+
+if MFR_Cmsemicon
+endif
+
+if MFR_Cypress
+endif
+
+if MFR_DialogSemiconductor
+endif
+
+if MFR_ELAN
+endif
+
+if MFR_FMD
+endif
+
+if MFR_FMSH
+endif
+
+if MFR_Geehy
+endif
+
+if MFR_GigaDevice
+    source "common/devices/GigaDevice/Kconfig"
+endif
+
+if MFR_Goodix
+endif
+
+if MFR_HDSC
+endif
+
+if MFR_Holtex
+endif
+
+if MFR_Infineon
+endif
+
+if MFR_LapisSemiconductor
+endif
+
+if MFR_Maxim
+endif
+
+if MFR_MediaTek
+endif
+
+if MFR_Megawin
+endif
+
+if MFR_Microchip
+endif
+
+if MFR_Microsemi
+endif
+
+if MFR_MindMotion
+endif
+
+if MFR_NordicSemiconductor
+endif
+
+if MFR_Nuvoton
+endif
+
+if MFR_NXP
+endif
+
+if MFR_RelChip
+endif
+
+if MFR_Renesas
+endif
+
+if MFR_SILAN
+endif
+
+if MFR_SiliconLabs
+endif
+
+if MFR_Sinowealth
+endif
+
+if MFR_SONiX
+endif
+
+if MFR_STMicroelectronics
+    source "common/devices/STMicroelectronics/Kconfig"
+endif
+
+if MFR_TexasInstruments
+endif
+
+if MFR_Toshiba
+endif
+
+if MFR_XMC
+endif
+
+if MFR_Zilog
+endif
+
+endmenu
+

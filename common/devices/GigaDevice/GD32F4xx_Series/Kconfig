@@ -1,0 +1,27 @@
+choice
+    prompt "Sub Series"
+    default n
+    
+    config SOC_GD32F403
+        bool "GD32F403"
+    config SOC_GD32F405
+        bool "GD32F405"
+    config SOC_GD32F407
+        bool "GD32F407"
+    config SOC_GD32F450
+        bool "GD32F450"
+endchoice
+
+if SOC_GD32F403
+endif
+
+if SOC_GD32F405
+endif
+
+if SOC_GD32F407
+    source "common/devices/GigaDevice/GD32F4xx_Series/GD32F407/Kconfig"
+endif
+
+if SOC_GD32F450
+endif
+

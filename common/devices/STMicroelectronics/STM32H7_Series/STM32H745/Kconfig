@@ -1,0 +1,35 @@
+choice
+    prompt "Chip"
+    default SOC_STM32H745BGT
+    
+    config SOC_STM32H745BGT
+        bool "STM32H745BGTx"
+
+    config SOC_STM32H745BIT
+        bool "STM32H745BITx"
+
+    config SOC_STM32H745IGK
+        bool "STM32H745IGKx"
+
+    config SOC_STM32H745IGT
+        bool "STM32H745IGTx"
+
+    config SOC_STM32H745IIK
+        bool "STM32H745IIKx"
+
+    config SOC_STM32H745IIT
+        bool "STM32H745IITx"
+
+    config SOC_STM32H745XGH
+        bool "STM32H745XGHx"
+
+    config SOC_STM32H745XIH
+        bool "STM32H745XIHx"
+
+    config SOC_STM32H745ZGT
+        bool "STM32H745ZGTx"
+
+    config SOC_STM32H745ZIT
+        bool "STM32H745ZITx"    
+endchoice
+
