@@ -1,4 +1,28 @@
+mainmenu "RT-Thread Configuration"
+
+config BSP_DIR
+    string
+    option env="BSP_ROOT"
+    default "."
+
+config LIBS_DIR
+    string
+    option env="LIBS_ROOT"
+    default "common/libraries"
+
+config PKGS_DIR
+    string
+    option env="PKGS_ROOT"
+    default "common/packages"
+
+config RTT_DIR
+    string
+    option env="RTT_ROOT"
+    default "common/rtt-kernel/4.0.2"
+    
 source "$RTT_DIR/src/Kconfig"
 source "$RTT_DIR/libcpu/Kconfig"
 source "$RTT_DIR/components/Kconfig"
-source "$RTT_DIR/examples/utest/testcases/Kconfig"
+source "$LIBS_DIR/ST/Kconfig"
+source "board/Kconfig"
+

@@ -5,11 +5,11 @@ import rtconfig
 if os.getenv('RTT_ROOT'):
     RTT_ROOT = os.getenv('RTT_ROOT')
 else:
-    RTT_ROOT = os.path.normpath(os.getcwd() + '/../../..')
+    RTT_ROOT = os.path.normpath(os.getcwd() + '/common/rtt-kernel/4.0.2')
 
 # set RTT_ROOT
-if not os.getenv("RTT_ROOT"): 
-    RTT_ROOT="rt-thread"
+#if not os.getenv("RTT_ROOT"): 
+    #RTT_ROOT="rt-thread"
 
 sys.path = sys.path + [os.path.join(RTT_ROOT, 'tools')]
 try:
@@ -40,10 +40,12 @@ Export('rtconfig')
 
 SDK_ROOT = os.path.abspath('./')
 
-if os.path.exists(SDK_ROOT + '/libraries'):
-    libraries_path_prefix = SDK_ROOT + '/libraries'
+if os.path.exists(SDK_ROOT + '/common/libraries/ST'):
+    libraries_path_prefix = SDK_ROOT + '/common/libraries/ST'
 else:
-    libraries_path_prefix = os.path.dirname(SDK_ROOT) + '/libraries'
+    #libraries_path_prefix = os.path.dirname(SDK_ROOT) + '/libraries'
+    print('Cannot found SDK root directory, please check SDK_ROOT')
+    exit(-1)
 
 SDK_LIB = libraries_path_prefix
 Export('SDK_LIB')
@@ -51,14 +53,15 @@ Export('SDK_LIB')
 # prepare building environment
 objs = PrepareBuilding(env, RTT_ROOT, has_libcpu=False)
 
-stm32_library = 'STM32H7xx_HAL'
+stm32_library = 'STM32H7xx_HAL/1.6.0'
 rtconfig.BSP_LIBRARY_TYPE = stm32_library
 
 # include drivers
 objs.extend(SConscript(os.path.join(libraries_path_prefix, stm32_library, 'SConscript')))
 
 # include libraries
-objs.extend(SConscript(os.path.join(libraries_path_prefix, 'HAL_Drivers', 'SConscript')))
+objs.extend(SConscript(os.path.join(libraries_path_prefix, 'HAL_Drivers/4.0.2', 'SConscript')))
 
 # make a building
 DoBuilding(TARGET, objs)
+
